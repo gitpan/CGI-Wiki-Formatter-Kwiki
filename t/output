@@ -66,20 +66,20 @@ Like this. Another paragraph.
   <b>Bold text</b>, <em>italic text</em>, and <u>underscore text</u>.
 <em><b>Combination of bold and italics</b></em>
   <em><b>Combination of bold and italics</b></em>
-Inline code like <tt>/etc/passwd</tt> or <tt>CGI::Kwiki</tt>
-  Inline code like <tt>/etc/passwd</tt> or <tt>CGI::Kwiki</tt>
+Inline code like <code>/etc/passwd</code> or <code>CGI::Kwiki</code>
+  Inline code like <code>/etc/passwd</code> or <code>CGI::Kwiki</code>
 
 </p>
 <hr>
 <p>
 <a href="wiki.cgi?node=WikiLinks">WikiLinks</a> are formed by two or more words in <em>camel-case</em>.
   <a href="wiki.cgi?node=WikiLinks">WikiLinks</a> are formed by two or more words in <em>camel-case</em>.
-External links begin with <a href="http://">http://</a>, like <a href="http://www.freepan.org">http://www.freepan.org</a>
-  External links begin with <a href="http://">http://</a>, like <a href="http://www.freepan.org">http://www.freepan.org</a>
+External links begin with <a href="//">http://</a>, like <a href="//www.freepan.org">http://www.freepan.org</a>
+  External links begin with <a href="//">http://</a>, like <a href="//www.freepan.org">http://www.freepan.org</a>
 Forced wiki <a href="wiki.cgi?node=links">links</a> are a alphnumeric string surrounded by square brackets.
   Forced wiki <a href="wiki.cgi?node=links">links</a> are a alphnumeric string surrounded by square brackets.
-Named http links have text with an <a href="http://">http://</a> link inside, like <a href="//www.freepan.org">FreePAN Site</a>
-  Named http links have text with an <a href="http://">http://</a> link inside, like <a href="//www.freepan.org">FreePAN Site</a>
+Named http links have text with an <a href="//">http://</a> link inside, like <a href="//www.freepan.org">FreePAN Site</a>
+  Named http links have text with an <a href="//">http://</a> link inside, like <a href="//www.freepan.org">FreePAN Site</a>
 Sometimes WordsShouldNotMakeAWikiLink so put a '!' beforehand.
   Sometimes WordsShouldNotMakeAWikiLink so put a '!' beforehand.
 Same thing with http://foobar.com

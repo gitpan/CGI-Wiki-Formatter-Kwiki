@@ -2,7 +2,7 @@ use warnings;
 use strict;
 
 use CGI::Wiki::Formatter::Kwiki;
-use Test::Simple tests=>5;
+use Test::More tests=>5;
 
 my $input = "";
 my $output = "";
@@ -28,4 +28,4 @@ ok($input);
 ok($output);
 ok($test);
 
-ok($output eq $test);
+is($output, $test);

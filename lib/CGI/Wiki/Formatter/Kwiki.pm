@@ -3,7 +3,7 @@ package CGI::Wiki::Formatter::Kwiki;
 use strict;
 
 use vars qw( $VERSION @_links_found );
-$VERSION = '0.02';
+$VERSION = '0.03';
 
 use CGI ":standard";
 use Carp qw(croak carp);

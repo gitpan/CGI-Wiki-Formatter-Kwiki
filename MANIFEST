@@ -2,6 +2,7 @@ Build.PL
 Makefile.PL
 lib/CGI/Wiki/Formatter/Kwiki.pm
 MANIFEST
+CHANGES
 t/01_test.t
 t/input
 t/output

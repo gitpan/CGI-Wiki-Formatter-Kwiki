@@ -6,7 +6,7 @@ my $build = Module::Build->new(
         'perl'        => '5.6.0',
         'CGI::Wiki'   => 0,
         'CGI::Kwiki'  => 0,
-        'Test::Simple'=> 0,
+        'Test::More'=> 0,
     },
     create_makefile_pl => 'traditional',
 );
