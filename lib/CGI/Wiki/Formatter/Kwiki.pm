@@ -3,7 +3,7 @@ package CGI::Wiki::Formatter::Kwiki;
 use strict;
 
 use vars qw( $VERSION @_links_found );
-$VERSION = '0.01';
+$VERSION = '0.02';
 
 use CGI ":standard";
 use Carp qw(croak carp);
@@ -19,6 +19,7 @@ CGI::Wiki::Formatter::Kwiki - A Kwiki formatter for CGI::Wiki.
 
 A formatter backend for L<CGI::Wiki>.
 
+It wraps the Formatter module from CGI::Kwiki, 
 =head1 SYNOPSIS
 
   my $store     = CGI::Wiki::Store::SQLite->new( ... );
@@ -67,10 +68,8 @@ sub _init {
 
   my $html = $formatter->format( $content );
 
-Escapes any tags which weren't specified as allowed on creation, then
-interpolates any macros, then calls Text::WikiFormat::format (with the
-config set up when B<new> was called) to translate the raw Wiki
-language supplied into HTML.
+Calls Kwiki::Formatter->process on the content (with some slight changes
+to allow for the fact that it's not in the context of a Kwiki.
 
 =cut
 
@@ -84,8 +83,6 @@ sub format {
   my @links_to = $formatter->find_internal_links( $content );
 
 Returns a list of all nodes that the supplied content links to.
-(Obviously this is dependent on object properties such as
-C<extended_links> etc.)
 
 =cut
 
@@ -101,11 +98,17 @@ sub find_internal_links {
 
 =head1 SEE ALSO
 
-L<CGI::Wiki>
+L<CGI::Wiki>, L<CGI::Kwiki>
 
 =head1 AUTHOR
 
 Tom Insam (tom@jerakeen.org)
+
+=head1 CREDITS
+
+Thanks to Kake for writing CGI::Wiki in the first place, and davorg for giving
+me a nice lumpy data-set to test things on. And I have to credit whomever came
+up with this markup language, I suppose. Hi.
 
 =head1 COPYRIGHT
 
@@ -115,6 +118,9 @@ This module is free software; you can redistribute it and/or modify it
 under the same terms as Perl itself.
 
 =cut
+
+
+
 
 sub wiki_link_format {
     my ($self, $text) = @_;
