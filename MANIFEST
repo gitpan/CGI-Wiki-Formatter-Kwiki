@@ -1,0 +1,7 @@
+Build.PL
+Makefile.PL
+lib/CGI/Wiki/Formatter/Kwiki.pm
+MANIFEST
+t/01_test.t
+t/input
+t/output

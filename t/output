@@ -1,0 +1,227 @@
+<p>
+This page describes the wiki markup language used by this kwiki.
+
+</p>
+<hr>
+<h1>Level 1 Heading (H1)</h1>
+<p>
+  = Level 1 Heading (H1) =
+
+</p>
+<hr>
+<h2>Level 2 Heading (H2)</h2>
+<p>
+  == Level 2 Heading (H2) ==
+
+</p>
+<hr>
+<h3>Level 3 Heading (H3)</h3>
+<p>
+  === Level 3 Heading (H3) ===
+
+</p>
+<hr>
+<h4>Level 4 Heading (H4)</h4>
+<p>
+  ==== Level 4 Heading (H4)
+
+</p>
+<hr>
+<h5>Level 5 Heading (H5)</h5>
+<p>
+  ===== Level 5 Heading (H5)
+
+</p>
+<hr>
+<h6>Level 6 Heading (H6)</h6>
+<p>
+  ====== Level 6 Heading (H6)
+
+</p>
+<hr>
+<p>
+The horizontal lines in this page are made with 4 or more dashes:
+  ----
+
+</p>
+<hr>
+<p>
+Paragraphs are separated by a blank line.
+</p>
+
+
+<p>
+Like this. Another paragraph.
+  Paragraphs are separated by a blank line.
+</p>
+
+
+<p>
+  Like this. Another paragraph.
+
+</p>
+<hr>
+<p>
+<b>Bold text</b>, <em>italic text</em>, and <u>underscore text</u>.
+  <b>Bold text</b>, <em>italic text</em>, and <u>underscore text</u>.
+<em><b>Combination of bold and italics</b></em>
+  <em><b>Combination of bold and italics</b></em>
+Inline code like <tt>/etc/passwd</tt> or <tt>CGI::Kwiki</tt>
+  Inline code like <tt>/etc/passwd</tt> or <tt>CGI::Kwiki</tt>
+
+</p>
+<hr>
+<p>
+<a href="wiki.cgi?node=WikiLinks">WikiLinks</a> are formed by two or more words in <em>camel-case</em>.
+  <a href="wiki.cgi?node=WikiLinks">WikiLinks</a> are formed by two or more words in <em>camel-case</em>.
+External links begin with <a href="http://">http://</a>, like <a href="http://www.freepan.org">http://www.freepan.org</a>
+  External links begin with <a href="http://">http://</a>, like <a href="http://www.freepan.org">http://www.freepan.org</a>
+Forced wiki <a href="wiki.cgi?node=links">links</a> are a alphnumeric string surrounded by square brackets.
+  Forced wiki <a href="wiki.cgi?node=links">links</a> are a alphnumeric string surrounded by square brackets.
+Named http links have text with an <a href="http://">http://</a> link inside, like <a href="//www.freepan.org">FreePAN Site</a>
+  Named http links have text with an <a href="http://">http://</a> link inside, like <a href="//www.freepan.org">FreePAN Site</a>
+Sometimes WordsShouldNotMakeAWikiLink so put a '!' beforehand.
+  Sometimes WordsShouldNotMakeAWikiLink so put a '!' beforehand.
+Same thing with http://foobar.com
+  Same thing with http://foobar.com
+Mailto links are just email addresses like <a href="mailto:foo@bar.com">foo@bar.com</a>.
+  Mailto links are just email addresses like <a href="mailto:foo@bar.com">foo@bar.com</a>.
+
+</p>
+<hr>
+<p>
+Links to images display the image:
+</p>
+
+
+<p>
+<img src="http://www.google.com/images/logo.gif">
+  <img src="http://www.google.com/images/logo.gif">
+
+</p>
+<hr>
+<p>
+Unordered lists begin with a '* '. The number of asterisks determines the level:
+
+</p>
+<ul>
+<li>foo
+<li>bar
+<ul>
+<li>boom
+<li>bam
+</ul>
+<li>baz
+</ul>
+<p>
+  * foo
+  * bar
+  ** boom
+  ** bam
+  * baz
+
+</p>
+<hr>
+<p>
+Ordered lists begin with a '0 ' (zero):
+
+</p>
+<ol>
+<li>foo
+<li>bar
+<ol>
+<li>boom
+<li>bam
+</ol>
+<li>baz
+</ol>
+<p>
+  0 foo
+  0 bar
+  00 boom
+  00 bam
+  0 baz
+
+</p>
+<hr>
+<p>
+You can mix lists too:
+
+</p>
+<ul>
+<li>Today:
+<ol>
+<li>Eat icecream
+<li>Buy a pony
+</ol>
+<li>Tommorrow:
+<ol>
+<li>Eat more icecream
+<li>Buy another pony
+</ol>
+</ul>
+<p>
+  * Today:
+  00 Eat icecream
+  00 Buy a pony
+  * Tommorrow:
+  00 Eat more icecream
+  00 Buy another pony
+
+</p>
+<hr>
+<p>
+Any text that does not begin in the first column is rendered as preformatted text.
+      foo   bar
+       x     y
+       1     2
+
+</p>
+<hr>
+<p>
+You can comment out wiki-text with '# ' at the beginning of a line. This will make the text an html comment:
+# These lines have been 
+# commented out
+  # These lines have been 
+  # commented out
+
+</p>
+<hr>
+<p>
+Simple Tables:
+|        | Dick   | Jane |
+| height | 72"    | 65"  |
+| weight | 130lbs | 150lbs |
+  |        | Dick   | Jane |
+  | height | 72"    | 65"  |
+  | weight | 130lbs | 150lbs |
+
+</p>
+<hr>
+<p>
+Tables with multiline or complex data:
+| &lt;&lt;END | &lt;&lt;END |
+This data has vertical | bars |
+END
+# This is some Perl code:
+sub foo {
+    print "I want a kwiki!\n"
+}
+END
+| foo | &lt;&lt;MSG |
+As you can see we use
+the Perl heredoc syntax.
+MSG
+  | &lt;&lt;END | &lt;&lt;END |
+  This data has vertical | bars |
+  END
+  # This is some Perl code:
+  sub foo {
+      print "I want a kwiki!\n"
+  }
+  END
+  | foo | &lt;&lt;MSG |
+  As you can see we use
+  the Perl heredoc syntax.
+  MSG
+</p>
